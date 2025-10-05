@@ -113,5 +113,7 @@ data-warehouse-project/
 
 If you’d like to collaborate, discuss data, or just connect:
 
-[![LinkedIn](https://www.linkedin.com/in/saishrita-mohapatra-10a943272/)
+
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saishrita-mohapatra-10a943272/)
 
