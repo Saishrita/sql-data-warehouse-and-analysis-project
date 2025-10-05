@@ -75,7 +75,6 @@ Developed SQL reports and dashboards with insights into:
 * **Product Performance** (top-selling products, underperformers)
 * **Sales Trends** (monthly, quarterly, yearly KPIs)
 
-More details in [docs/requirements.md](docs/requirements.md).
 
 ---
 
