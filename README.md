@@ -1,21 +1,52 @@
-# SQL Data Warehouse & Analytics Project
+# Data Warehouse and Analytics Project
 
-A complete **data warehousing + analytics** solution built with SQL Server, from raw ingestion to insightful reporting.
+Welcome to my **Data Warehouse and Analytics Project** 🚀
+This project demonstrates how to design and implement a complete data warehousing and analytics solution — from raw data ingestion to business-ready insights.
+
+It’s designed as a **portfolio project** to showcase my skills in **Data Engineering, SQL Development, ETL Pipelines, and Analytics** using industry best practices.
 
 ---
 
-## 🏗️ Architecture & Design
+## 🏗️ Data Architecture
 
-This project employs a **Medallion / Layered** architecture:
+I followed the **Medallion Architecture** approach with **Bronze, Silver, and Gold layers**:
 
-* **Bronze Layer** → Ingest raw data exactly as received (CSV → staging tables)
-* **Silver Layer** → Cleanse, standardize, dedupe, and transform data
-* **Gold Layer** → Business-ready data in a **star schema** (fact + dimensions) for analytics
-
-The diagram below visualizes how data flows through these layers:
 ![Data Architecture](docs/data_architecture.png)
 
+1. **Bronze Layer**
+
+   * Stores raw data directly from source systems.
+   * Data ingested from CSV files into **SQL Server**.
+
+2. **Silver Layer**
+
+   * Handles data cleaning, deduplication, standardization, and normalization.
+   * Prepares data for downstream analytical workloads.
+
+3. **Gold Layer**
+
+   * Business-ready data modeled in a **Star Schema**.
+   * Optimized for reporting, dashboards, and advanced analytics.
+
 ---
+
+## 🚀 Project Requirements
+
+### Data Engineering – Building the Warehouse
+
+* Consolidate ERP & CRM datasets into SQL Server.
+* Ensure **data quality** with cleansing and transformations.
+* Integrate into a unified **star schema** for analysis.
+
+### Data Analysis – Reporting & Insights
+
+Developed SQL reports and dashboards with insights into:
+
+* **Customer Behavior** (acquisition, retention, segmentation)
+* **Product Performance** (top-selling products, underperformers)
+* **Sales Trends** (monthly, quarterly, yearly KPIs)
+
+
 
 ## 📋 Project Overview
 
@@ -32,6 +63,14 @@ This repository consists of two major components:
    * Insights into customers, products, sales, and trends
 
 This makes the project truly **end-to-end**, covering both backend data engineering and frontend analytics.
+
+🎯 This project highlights my skills in:
+
+* SQL Development
+* Data Modeling
+* ETL & Data Pipelines
+* Data Warehousing
+* Analytics & Reporting
 
 ---
 
