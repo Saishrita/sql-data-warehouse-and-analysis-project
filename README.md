@@ -35,4 +35,4 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 
 ## 🌟 About Me
 
-Hi there! I'm **Saishrita Mohapatra**. I’m currently a Student exploring how to get better at dealing with anything data.
+Hi there! I'm **Saishrita Mohapatra**. I’m currently a final year B.Tech Student exploring how to get better at dealing with anything data.
