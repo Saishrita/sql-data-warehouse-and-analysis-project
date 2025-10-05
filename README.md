@@ -1,119 +1,136 @@
-# Data Warehouse and Analytics Project
+# SQL Data Warehouse & Analytics Project
 
-Welcome to my **Data Warehouse and Analytics Project** 🚀
-This project demonstrates how to design and implement a complete data warehousing and analytics solution — from raw data ingestion to business-ready insights.
-
-It’s designed as a **portfolio project** to showcase my skills in **Data Engineering, SQL Development, ETL Pipelines, and Analytics** using industry best practices.
+A complete **data warehousing + analytics** solution built with SQL Server, from raw ingestion to insightful reporting.
 
 ---
 
-## 🏗️ Data Architecture
+## 🏗️ Architecture & Design
 
-I followed the **Medallion Architecture** approach with **Bronze, Silver, and Gold layers**:
+This project employs a **Medallion / Layered** architecture:
 
+* **Bronze Layer** → Ingest raw data exactly as received (CSV → staging tables)
+* **Silver Layer** → Cleanse, standardize, dedupe, and transform data
+* **Gold Layer** → Business-ready data in a **star schema** (fact + dimensions) for analytics
+
+The diagram below visualizes how data flows through these layers:
 ![Data Architecture](docs/data_architecture.png)
 
-1. **Bronze Layer**
+---
 
-   * Stores raw data directly from source systems.
-   * Data ingested from CSV files into **SQL Server**.
+## 📋 Project Overview
 
-2. **Silver Layer**
+This repository consists of two major components:
 
-   * Handles data cleaning, deduplication, standardization, and normalization.
-   * Prepares data for downstream analytical workloads.
+1. **Data Engineering / ETL & Warehouse**
 
-3. **Gold Layer**
+   * CSV ingestion, transformations, and modeling
+   * Building dimension/fact tables suited for analytics
 
-   * Business-ready data modeled in a **Star Schema**.
-   * Optimized for reporting, dashboards, and advanced analytics.
+2. **Analytics / SQL Reporting & Exploration**
+
+   * Structured SQL scripts to explore, analyze, and report on the warehouse
+   * Insights into customers, products, sales, and trends
+
+This makes the project truly **end-to-end**, covering both backend data engineering and frontend analytics.
 
 ---
 
-## 📖 Project Overview
+## 🛠️ Tech Stack & Tools
 
-The project includes:
-
-* **Data Architecture** → Modern warehouse design (Bronze → Silver → Gold).
-* **ETL Pipelines** → Scripts to extract, transform, and load data from ERP & CRM CSV sources.
-* **Data Modeling** → Creation of **fact** and **dimension** tables for analytics.
-* **Analytics & Reporting** → SQL queries to analyze **Customer Behavior, Product Performance, and Sales Trends**.
-
-🎯 This project highlights my skills in:
-
-* SQL Development
-* Data Modeling
-* ETL & Data Pipelines
-* Data Warehousing
-* Analytics & Reporting
-
----
-
-## 🛠️ Tools & Technologies
-
-* **SQL Server Express** → Database & Data Warehouse
-* **SQL Server Management Studio (SSMS)** → Database management
-* **CSV Datasets** → ERP and CRM data
-* **DrawIO** → Data models, flow, and architecture diagrams
-* **Git & GitHub** → Version control and documentation
-
----
-
-## 🚀 Project Requirements
-
-### Data Engineering – Building the Warehouse
-
-* Consolidate ERP & CRM datasets into SQL Server.
-* Ensure **data quality** with cleansing and transformations.
-* Integrate into a unified **star schema** for analysis.
-
-### Data Analysis – Reporting & Insights
-
-Developed SQL reports and dashboards with insights into:
-
-* **Customer Behavior** (acquisition, retention, segmentation)
-* **Product Performance** (top-selling products, underperformers)
-* **Sales Trends** (monthly, quarterly, yearly KPIs)
-
+* **SQL Server Express / Full** — Data warehouse engine
+* **SQL Server Management Studio (SSMS)** — SQL execution, query workbench
+* **CSV / flat files** — Source data (ERP, CRM)
+* **DrawIO** — Architecture, flow, and model diagrams
+* **Git / GitHub** — Version control and collaboration
 
 ---
 
 ## 📂 Repository Structure
 
 ```
-data-warehouse-project/
+sql-data-warehouse-project/
 │
-├── datasets/                           # Raw datasets (ERP & CRM CSV files)
+├── datasets/                           # Raw source CSV files (ERP, CRM )
 │
-├── docs/                               # Documentation & diagrams
-│   ├── etl.drawio                      # ETL pipeline design
-│   ├── data_architecture.drawio        # Architecture diagram
-│   ├── data_catalog.md                 # Dataset catalog & metadata
-│   ├── data_flow.drawio                # Data flow diagram
-│   ├── data_models.drawio              # Star schema model
-│   ├── naming-conventions.md           # Naming standards
+├── docs/                               # Documentation & visuals
+│   ├── data_integration.png                     # ETL pipeline diagram
+│   ├── data_architecture.png       # Architecture / layering design
+│   ├── data_catalog.md                 # Data dictionary / field definitions
+│   ├── data_flow.png                # Data movement & dependencies
+│   ├── data_models.png              # Star schema / ER diagrams
+│   ├── naming-conventions.md           # Standards for naming tables, columns etc.
 │
 ├── scripts/                            # SQL scripts
-│   ├── bronze/                         # Raw data ingestion
-│   ├── silver/                         # Data cleansing & transformations
-│   ├── gold/                           # Star schema & analytics-ready models
+│   ├── bronze/                         # Ingestion / staging scripts
+│   ├── silver/                         # Data cleaning & transformation scripts
+│   ├── gold/                           # Schema building & fact/dimension creation
+│   ├── analytics/                      # SQL scripts for business reporting & analytics
+│       ├── 01_database_exploration.sql       # Overview of tables, row counts, schema stats
+│       ├── 02_dimensions_exploration.sql     # Explore dimension tables’ contents & quality
+│       ├── 03_date_range_exploration.sql     # Filtering and slicing by date/time
+│       ├── 04_measures_exploration.sql       # Analyzing key measures (revenue, sales, etc.)
+│       ├── 05_magnitude_analysis.sql         # Magnitude / distribution of measures
+│       ├── 06_ranking_analysis.sql           # Top-N analysis for customers/products/regions
+│       ├── 07_change_over_time_analysis.sql  # Trend & period-over-period change analyses
+│       ├── 08_cumulative_analysis.sql        # Running sums, cumulative metrics over time
+│       ├── 09_performance_analysis.sql       # KPI dashboards, comparisons
+│       ├── 10_data_segmentation.sql          # Customer / product segmentation by behavior
+│       ├── 11_part_to_whole_analysis.sql     # Contribution / share analyses (part-to-whole)
+│       ├── 12_report_customers.sql           # Final customer-level reporting view & metrics
+│       ├── 13_report_products.sql            # Final product-level reporting view & metrics
+│       └── …                                 # Additional analytical scripts as needed
+│    ├── init_database.sql
+├── tests/                              # Quality checks, assertions, or validation queries
 │
-├── tests/                              # Quality checks & test scripts
-│
-├── README.md                           # Project overview
-├── LICENSE                             # License
-├── .gitignore                          # Git ignored files
-└── requirements.txt                    # Dependencies
+├── README.md                           # Project overview & instructions
 ```
 
 ---
 
+## 📈 Analytics & Insights Overview
 
-## 📬 Connect with Me
+Using the `analytics/` scripts, here are some of the business insights you’ll find:
 
-If you’d like to collaborate, discuss data, or just connect:
+* **Customer Behavior**
+
+  * Top customers by total spend
+  * Churn/retention analyses
+  * Segmentation by purchase frequency, recency, and value
+
+* **Product Performance**
+
+  * Best-selling and underperforming products
+  * Category-level contribution to revenue
+
+* **Sales Trends & Growth**
+
+  * Monthly / annual trend analyses
+  * Period-over-period growth comparisons
+  * Cumulative growth & lifetime metrics
+
+* **Detailed Reports**
+
+  * Customer-level summary tables
+  * Product-level rating and performance dashboards
+
+---
 
 
+## 🎯 Why This Project Stands Out
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saishrita-mohapatra-10a943272/)
+* Demonstrates an **end-to-end pipeline**: from raw ingestion to business insights
+* Separation of concerns: ingestion (bronze), transformation (silver), analytics (gold + reporting)
+* Modular & reusable SQL scripts for analytics + reporting
+* Easily extensible: add more dimensions, metrics, or analytics scripts
+* Clear documentation and visual diagrams to support understanding
+
+---
+
+## 📬 Stay Connected
+
+Created by **Saishrita Mohapatra**
+
+* [GitHub](https://github.com/Saishrita)
+* [LinkedIn](https://www.linkedin.com/in/saishrita-mohapatra-10a943272/)
+
 
