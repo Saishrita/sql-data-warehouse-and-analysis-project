@@ -92,7 +92,7 @@ sql-data-warehouse-project/
 ├── datasets/                           # Raw source CSV files (ERP, CRM )
 │
 ├── docs/                               # Documentation & visuals
-│   ├── data_integration.png                     # ETL pipeline diagram
+│   ├── data_integration.png                     # Table Relations
 │   ├── data_architecture.png       # Architecture / layering design
 │   ├── data_catalog.md                 # Data dictionary / field definitions
 │   ├── data_flow.png                # Data movement & dependencies
