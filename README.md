@@ -103,7 +103,7 @@ sql-data-warehouse-project/
 │   ├── bronze/                         # Ingestion / staging scripts
 │   ├── silver/                         # Data cleaning & transformation scripts
 │   ├── gold/                           # Schema building & fact/dimension creation
-│   ├── analytics/                      # SQL scripts for business reporting & analytics
+│   ├── data_analysis_scripts/                      # SQL scripts for business reporting & analytics
 │       ├── 01_database_exploration.sql       # Overview of tables, row counts, schema stats
 │       ├── 02_dimensions_exploration.sql     # Explore dimension tables’ contents & quality
 │       ├── 03_date_range_exploration.sql     # Filtering and slicing by date/time
@@ -128,7 +128,7 @@ sql-data-warehouse-project/
 
 ## 📈 Analytics & Insights Overview
 
-Using the `analytics/` scripts, here are some of the business insights you’ll find:
+Using the `data_analysis_scripts/` scripts, here are some of the business insights you’ll find:
 
 * **Customer Behavior**
 
